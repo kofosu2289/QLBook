@@ -13,6 +13,26 @@ p {
   margin: 70px auto 0 auto;
 }
 
+form {
+  padding-bottom: 20px;
+}
+
+form textarea {
+  width: calc(100% -20px);
+  padding: 10px;
+  border-color: #BBB;
+}
+
+form [type=submit] {
+  border: none;
+  background-color: #6CA6FD;
+  color: #FFF;
+  padding: 10px;
+  border-radius: 5px;
+  font-size: 14px;
+  float: right;
+}
+
 .feed {
   background-color: #BBB;
   padding: 3px;
