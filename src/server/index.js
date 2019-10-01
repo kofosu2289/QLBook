@@ -7,6 +7,8 @@ import compress from 'compression';
 const app = express();
 const root = path.join(__dirname, '../../');
 
+app.use(cors());
+app.use(compress());
 app.use(helmet());
 app.use(helmet.contentSecurityPolicy({
   directives: {
