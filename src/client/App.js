@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import { Helmet } from 'react-helmet';
 import '../../assets/css/style.css';
 
 const posts = [{
@@ -43,11 +44,15 @@ export default class App extends Component {
       postContent: ''
     }));
   }
-  
+
   render() {
     const { posts, postContent } = this.state;
     return (
       <div className="container">
+        <Helmet>
+          <title>QLbook - Feed</title>
+          <meta name="description" content="Newsfeed of all your friends on QLbook" />
+        </Helmet>
         <div className="postForm">
           <form onSubmit={this.handleSubmit}>
             <textarea value={postContent} onChange={this.handlePostContentChange}
